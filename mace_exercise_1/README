@@ -1,4 +1,7 @@
 Execrcise 1: basic examples for runing mace tasks.
+
+Useful link: https://mace-docs.readthedocs.io/en/latest/guide/finetuning.html
+
 1.1 Train a MLIP from scratch
     Note: you can change some parameters in 'submiss.sh' like E0s='average', replace 'valid_frac' to 'valid_file', change 'hiddeirreps', try to understand all important parameters. 
     sbatch submiss.sh 
