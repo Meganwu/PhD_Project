@@ -1,0 +1,29 @@
+In exercise, you will implement some basic DFT calculations.
+
+submit_aims.sh       the script of submit aims task on Mahti    # sbatch submit_aims.sh
+
+1. bulk
+optimize lattice constant (example Au). Here, you can relax the whole cell (all three lattice vectors a, b, c and 3 angles) to obtain accurate values. More strictly, You can fit the potential energy surfaces by varing a, b, c. (More details in https://indico.ictp.it/event/a12198/session/20/contribution/12/material/0/1.pdf)
+
+2. Surface energy (try to use the lattice constant calculated in task_bulk_au (compare your results with exps and references), and construct Au(111), Au(100) and Au(110) surfaces, optimize strucutres  and evaluate their surface energies)
+https://ase-lib.org/ase/build/surface.html
+
+from ase.build import fcc111, fcc100, fcc110
+from ase.io import write
+slab = fcc111('Au', size=(5,5,4), vacuum=15.0, a=4.08)
+write("au111.in", slab, format='aims')
+slab = fcc100('Au', size=(5,5,4), vacuum=15.0, a=4.08)
+write("au100.in", slab, format='aims')
+slab = fcc110('Au', size=(5,5,4), vacuum=15.0, a=4.08)
+write("au110.in", slab, format='aims')
+
+
+3. Molecules on surfaces 
+3.1 Single-point calculation
+3.2 Optimization
+3.3 Molecular dynamcis
+3.4 Simulate STM
+3.5 Transition state (NEB)
+
+
+Have a nice day!
